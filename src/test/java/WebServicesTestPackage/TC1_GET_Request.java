@@ -1,10 +1,6 @@
 package WebServicesTestPackage;
-
-import org.apache.commons.lang3.RandomStringUtils;
-import org.json.simple.JSONObject;
 import org.junit.Assert;
 import org.testng.annotations.Test;
-
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
@@ -12,11 +8,9 @@ import io.restassured.specification.RequestSpecification;
 
 public class TC1_GET_Request {
 
-	
 	@Test // Simple GET request
 	public void getWeatherDetails()
 	{
-			
 		//END POINT BASE URI
 		RestAssured.baseURI="http://restapi.demoqa.com/utilities/weather/city";  // URI
 		
@@ -40,8 +34,5 @@ public class TC1_GET_Request {
 		
 		// Validation
 		Assert.assertEquals(String.valueOf(statusCode), "200");
-		
-		
 	}
-
 }
